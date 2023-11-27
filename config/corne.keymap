@@ -27,8 +27,6 @@
 /* MACROS */
 #define YSPCP    LA(COMMA)          //Space Previous
 #define YSPCN    LA(DOT)            //Space Next
-#define MCN      LC(LA(RIGHT))      //Mission Control Next Space
-#define MCP      LC(LA(LEFT))       //Mission Control Previous Space
 #define SCRN     LG(LS(xN4))        //Screen Shot (save)
 #define TABN     LS(LG(RBKT))       //Tab next
 #define TABP     LS(LG(LBKT))       //Tab previous
@@ -213,16 +211,16 @@
             label = "NAV";
             bindings = <
 //    ╭──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────╮
-//    │ QUIT | CLOSE│      │      │      │    │ TABP │ TABN │ YSPCP│ YSPCN│ MCN  │
+//    │ QUIT | CLOSE│      │      │      │    │ TABP │ TABN │ YSPCP│ YSPCN│      │
 //    ├──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┤
-//    │ LOPT | LCTRL│ LCMD │ LSHFT│ DEL  │    │ LEFT │ DOWN │  UP  │ RIGHT│ MCP  |
+//    │ LOPT | LCTRL│ LCMD │ LSHFT│      │    │ LEFT │ DOWN │  UP  │ RIGHT│      |
 //    ├──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┤
 //    │ UNDO │ CUT  │ COPY │ PASTE│ SCRN │    │ HOME │ PGDN │ PGUP │  END │      │
 //    ╰──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────╯
 //                  │      │      │      │    | BACK │ FWD  │      │
 //                  ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
-    &kp ZQUIT      &kp ZCLOSE     ___            ___            ___                &kp TABP       &kp TABN       &kp YSPCP      &kp YSPCN      &kp MCN
-    &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp DEL            &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp MCP
+    &kp ZQUIT      &kp ZCLOSE     ___            ___            ___                &kp TABP       &kp TABN       &kp YSPCP      &kp YSPCN      ___
+    &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      ___                &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      ___
     &kp ZUNDO      &kp ZCUT       &kp ZCOPY      &kp ZPASTE     &kp SCRN           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___
                                 ___            ___            ___                &kp BACK       &kp FWD        ___
             >;
