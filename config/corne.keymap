@@ -27,7 +27,9 @@
 /* MACROS */
 #define YSPCP    LA(COMMA)          //Space Previous
 #define YSPCN    LA(DOT)            //Space Next
-#define SCRN     LG(LS(xN4))        //Screen Shot (save)
+#define MCN      LC(LA(RIGHT))      //Mission Control Next Space
+#define MCP      LC(LA(LEFT))       //Mission Control Previous Space
+#define SCRN     LG(LS(N4))        //Screen Shot (save)
 #define TABN     LS(LG(RBKT))       //Tab next
 #define TABP     LS(LG(LBKT))       //Tab previous
 #define BACK     LG(LBKT)           //Back
@@ -35,12 +37,6 @@
 #define MUTE     LG(LS(M))          //Mute
 #define HYPER    LC(LA(LGUI))       //Hyper
 #define MEH      LS(LC(LALT))       //Meh
-#define ZUNDO     LG(Z)              //Undo
-#define ZCUT      LG(X)              //Cut
-#define ZCOPY     LG(C)              //Copy
-#define ZPASTE    LG(V)              //Paste
-#define ZQUIT     LG(Q)              //Quit
-#define ZCLOSE    LG(W)              //Close Window
 
 /* Global settings */
 
@@ -211,17 +207,17 @@
             label = "NAV";
             bindings = <
 //    ╭──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────╮
-//    │ QUIT | CLOSE│      │      │      │    │ TABP │ TABN │ YSPCP│ YSPCN│      │
+//    │ QUIT | CLOSE│      │      │      │    │ TABP │ TABN │ YSPCP│ YSPCN│ MCN  │
 //    ├──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┤
-//    │ LOPT | LCTRL│ LCMD │ LSHFT│      │    │ LEFT │ DOWN │  UP  │ RIGHT│      |
+//    │ LOPT | LCTRL│ LCMD │ LSHFT│ DEL  │    │ LEFT │ DOWN │  UP  │ RIGHT│ MCP  |
 //    ├──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┤
 //    │ UNDO │ CUT  │ COPY │ PASTE│ SCRN │    │ HOME │ PGDN │ PGUP │  END │      │
 //    ╰──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────╯
 //                  │      │      │      │    | BACK │ FWD  │      │
 //                  ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
-    &kp ZQUIT      &kp ZCLOSE     ___            ___            ___                &kp TABP       &kp TABN       &kp YSPCP      &kp YSPCN      ___
-    &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      ___                &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      ___
-    &kp ZUNDO      &kp ZCUT       &kp ZCOPY      &kp ZPASTE     &kp SCRN           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___
+    &kp RG(Q)      &kp RG(W)      ___            ___            ___                &kp TABP       &kp TABN       &kp YSPCP      &kp YSPCN      &kp MCN
+    &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp DEL            &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp MCP
+    &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      &kp SCRN           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___
                                 ___            ___            ___                &kp BACK       &kp FWD        ___
             >;
         };
