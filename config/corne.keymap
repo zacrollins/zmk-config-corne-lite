@@ -37,12 +37,12 @@
 #define MUTE     LG(LS(M))          //Mute
 #define HYPER    LC(LA(LGUI))       //Hyper
 #define MEH      LS(LC(LALT))       //Meh
-#define UNDO     LG(Z)              //Undo
-#define CUT      LG(X)              //Cut
-#define COPY     LG(C)              //Copy
-#define PASTE    LG(V)              //Paste
-#define QUIT     LG(Q)              //Quit
-#define CLOSE    LG(W)              //Close Window
+#define ZUNDO     LG(Z)              //Undo
+#define ZCUT      LG(X)              //Cut
+#define ZCOPY     LG(C)              //Copy
+#define ZPASTE    LG(V)              //Paste
+#define ZQUIT     LG(Q)              //Quit
+#define ZCLOSE    LG(W)              //Close Window
 
 /* Global settings */
 
@@ -221,9 +221,9 @@
 //    ╰──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────╯
 //                  │      │      │      │    | BACK │ FWD  │      │
 //                  ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
-    &kp QUIT      &kp CLOSE       ___            ___            ___                &kp TABP       &kp TABN       &kp YSPCP      &kp YSPCN      &kp MCN
+    &kp ZQUIT      &kp ZCLOSE     ___            ___            ___                &kp TABP       &kp TABN       &kp YSPCP      &kp YSPCN      &kp MCN
     &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp DEL            &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp MCP
-    &kp UNDO       &kp CUT        &kp COPY       &kp PASTE      &kp SCRN           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___
+    &kp ZUNDO      &kp ZCUT       &kp ZCOPY      &kp ZPASTE     &kp SCRN           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___
                                 ___            ___            ___                &kp BACK       &kp FWD        ___
             >;
         };
