@@ -149,14 +149,14 @@
 //    ╭─────────────┬─────────────┬───────────────┬───────────────┬────────────────╮    ╭─────────────────┬────────────────┬──────────────┬────────────────┬────────────────╮
 //    │      Q      │      W      │  &hml MEH E   │      R        │        T       │    │       Y         │      U         │  &hmr MEH I  │        O       │        P       │
 //    ├─────────────┼─────────────┼───────────────┼───────────────┼────────────────┤    ├─────────────────┼────────────────┼──────────────┼────────────────┼────────────────┤
-//    │ &hml LALT A │ &hml CTRL S │ &hml LGUI D   │ &hml LSHFT F  │        G       │    │       H         │ &hmr RSHFT J   │ &hmr RGUI K  │ &hmr RCTRL L   │ &hmr RALT ;    │
+//    │ &hml LALT A │ &hml CTRL S │ &hml LGUI D   │ &hml LSHFT F  │        G       │    │       H         │ &hmr RSHFT J   │ &hmr RGUI K  │ &hmr RCTRL L   │ &hmr RALT '    │
 //    ├─────────────┼─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┼────────────────┤
 //    │      Z      │      X      │      C        │      V        │        B       │    │       N         │        M       │      ,       │       .        │        /       │
 //    ╰─────────────┴─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┴────────────────╯
 //                                │ &mt HYPER ESC │ &lt NAV RET   │  &lt NUM TAB   │    |  &lt_bspc SYM   │     SPACE      │   CAPS_WORD  │
 //                                ╰───────────────┴───────────────┴────────────────╯    ╰─────────────────┴────────────────┴──────────────╯
     &kp Q        &kp W         &hml MEH E    &kp R           &kp T       &kp Y   &kp U           &hmr MEH I      &kp O           &kp P
-    &hml LALT A  &hml LCTRL S  &hml LGUI D   &hml LSHFT F    &kp G       &kp H   &hmr RSHFT J    &hmr RGUI K     &hmr RCTRL L    &hmr RALT SEMI
+    &hml LALT A  &hml LCTRL S  &hml LGUI D   &hml LSHFT F    &kp G       &kp H   &hmr RSHFT J    &hmr RGUI K     &hmr RCTRL L    &hmr RALT SQT
     &kp Z        &kp X         &kp C         &kp V           &kp B       &kp N   &kp M           &kp COMMA       &kp DOT         &kp FSLH
                             &mt HYPER ESC  &lt NAV RET   &lt NUM TAB        &lt_bspc SYM 0   &kp SPACE      &caps_word
             >;
@@ -166,38 +166,39 @@
             label = "NUM";
             bindings = <
 //    ╭──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────╮
-//    │   1  │  2   │   3  │   4  │  5   │    │   6  │  7   │   8  │   9  │   0  │
+//    │      │      │      │      │      │    │   [  │   7  │   8  │   9  │   ]  │
 //    ├──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┤
-//    │      │      │      │   -  │   {  │    │   }  │   4  │   5  │   6  │   +  │
+//    │ LALT │ LCTRL│ LGUI │ LSHFT│      │    │   +  │   4  │   5  │   6  │   :  │
 //    ├──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┤
-//    │      │      │      │   |  │   [  │    │   ]  │   1  │   2  │   3  │   =  │
+//    │      │      │      │      │      │    │   \  │   1  │   2  │   3  │   =  │
 //    ╰──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────╯
-//                  │      │      │      │    |      │   0  │   .  │
+//                  │      │      │      │    |   -  │   0  │   ~  │
 //                  ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
 
-    &kp N1         &kp N2         &kp N3         &kp N4         &kp N5             &kp N6         &kp N7         &kp N8         &kp N9         &kp N0
-    ___            ___            ___            &kp MINUS      &kp LBKT           &kp RBKT       &kp N4         &kp N5         &kp N6         &kp PLUS
-    ___            ___            ___            &kp PIPE       &kp LBRC           &kp RBRC       &kp N1         &kp N2         &kp N3         &kp EQUAL
-                                ___            ___            ___                ___            &kp N0         &kp DOT
+    ___            ___            ___            ___            ___                &kp LBKT       &kp N7         &kp N8         &kp N9         &kp RBKT
+    &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      ___                &kp SEMI       &kp N4         &kp N5         &kp N6         &kp SEMI
+    ___            ___            ___            ___            ___                &kp BSLH       &kp N1         &kp N2         &kp N3         &kp EQUAL
+                                ___            ___            ___                &kp MINUS      &kp N0         &kp DOT
             >;
+
         };
 
         sym_layer {
             label = "SYM";
             bindings = <
 //    ╭──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────╮
-//    │   !  │   @  │   #  │   $  │   %  │    │   ^  │   &  │   *  │   (  │   )  │
+//    │   {  │   &  │   *  │   -  │   }  │    │      │      │      │      │      |
 //    ├──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┤
-//    │      │      │      │      │      │    │   -  │   =  │   [  │   ]  │   \  │
+//    │   ;  │   $  │   %  │   ^  │   =  │    │      │ RSHFT│ RGUI │ RCTRL│ RALT │
 //    ├──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┤
-//    │      │      │      │      │      │    │   _  │   +  │   {  │   }  │   |  │
+//    │   ~  │   !  │   @  │   #  │   |  │    │      │      │      │      │      │
 //    ╰──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────╯
-//                  │      │      │      │    |      │      │      │
+//                  │   (  │   )  │   _  │    |      │      │      │
 //                  ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
 
-    &kp EXCL       &kp AT         &kp HASH       &kp DLLR       &kp PRCNT          &kp CARET      &kp AMPS       &kp KP_MULTIPLY &kp LPAR      &kp RPAR
-    ___            ___            ___            ___            ___                &kp MINUS      &kp EQUAL      &kp LBKT       &kp RBKT       &kp BSLH
-    ___            ___            ___            ___            ___                &kp UNDER      &kp PLUS       &kp LBRC       &kp RBRC       &kp PIPE
+    &kp LBRC       &kp AMPS       &kp STAR       &kp MINUS       &kp RBRC          ___            ___            ___            ___            ___
+    &kp SEMI       &kp DOLLAR     &kp PRCNT      &kp CARET      &kp EQUAL          ___            &kp RSHFT      &kp RGUI       &kp RCTRL      &kp RALT
+    &kp TILDE      &kp EXCL       &kp AT         &kp HASH       &kp PIPE           ___            ___            ___            ___            ___
                                 ___            ___            ___                ___            ___            ___
             >;
         };
@@ -206,17 +207,17 @@
             label = "NAV";
             bindings = <
 //    ╭──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────╮
-//    │ QUIT | CLOSE│ CMD+`│      │  ESC │    │ TABP │ TABN │ SPCP │ SPCN │      │
+//    │ QUIT | CLOSE│      │      │      │    │ TABP │ TABN │ YSPCP│ YSPCN│ MCN  │
 //    ├──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┤
-//    │ LOPT | LCTRL│ LCMD │ LSHFT│ SWAP │    │ LEFT │ DOWN │  UP  │ RIGHT│      |
+//    │ LOPT | LCTRL│ LCMD │ LSHFT│ DEL  │    │ LEFT │ DOWN │  UP  │ RIGHT│ MCP  |
 //    ├──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┤
-//    │ UNDO │ CUT  │ COPY │ PASTE│ BSWAP│    │ HOME │ PGDN │ PGUP │  END │      │
+//    │ UNDO │ CUT  │ COPY │ PASTE│ SCRN │    │ HOME │ PGDN │ PGUP │  END │      │
 //    ╰──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────╯
 //                  │      │      │      │    | BACK │ FWD  │      │
 //                  ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
-    &kp RG(Q)      &kp RG(W)      &kp LG(GRAVE)  ___            &kp ESC            &kp TABP       &kp TABN       &kp SPCP       &kp SPCN       ___
-    &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp &swapper       &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      ___
-    &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      &kp LS(TAB)        &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___
+    &kp RG(Q)      &kp RG(W)      ___            ___            ___                &kp TABP       &kp TABN       &kp YSPCP      &kp YSPCN      &kp MCN
+    &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp DEL            &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp MCP
+    &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      &kp SCRN           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___
                                 ___            ___            ___                &kp BACK       &kp FWD        ___
             >;
         };
