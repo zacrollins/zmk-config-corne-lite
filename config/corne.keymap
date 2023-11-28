@@ -57,6 +57,13 @@
 };
 
 / {
+    chosen {
+        // zmk,matrix_transform = &default_transform;
+        zmk,matrix_transform = &five_column_transform;
+    };
+};
+
+/ {
 
     /* include combos file */
     #include "combos.dtsi"
@@ -155,9 +162,9 @@
 //    ╰─────────────┴─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┴────────────────╯
 //                                │ &mt HYPER ESC │ &lt NAV RET   │  &lt NUM TAB   │    |  &lt_bspc SYM   │     SPACE      │   CAPS_WORD  │
 //                                ╰───────────────┴───────────────┴────────────────╯    ╰─────────────────┴────────────────┴──────────────╯
-    &kp Q        &kp W         &hml MEH E    &kp R           &kp T       &kp Y   &kp U           &hmr MEH I      &kp O           &kp P
-    &hml LALT A  &hml LCTRL S  &hml LGUI D   &hml LSHFT F    &kp G       &kp H   &hmr RSHFT J    &hmr RGUI K     &hmr RCTRL L    &hmr RALT SQT
-    &kp Z        &kp X         &kp C         &kp V           &kp B       &kp N   &kp M           &kp COMMA       &kp DOT         &kp FSLH
+    ___     &kp Q        &kp W         &hml MEH E    &kp R           &kp T       &kp Y   &kp U           &hmr MEH I      &kp O           &kp P          ___
+    ___     &hml LALT A  &hml LCTRL S  &hml LGUI D   &hml LSHFT F    &kp G       &kp H   &hmr RSHFT J    &hmr RGUI K     &hmr RCTRL L    &hmr RALT SQT  ___
+    ___     &kp Z        &kp X         &kp C         &kp V           &kp B       &kp N   &kp M           &kp COMMA       &kp DOT         &kp FSLH       ___
                             &mt HYPER ESC  &lt NAV RET   &lt NUM TAB        &lt_bspc SYM 0   &kp SPACE      &caps_word
             >;
         };
