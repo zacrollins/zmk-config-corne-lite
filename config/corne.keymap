@@ -179,11 +179,11 @@
 //    ├──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┤
 //    │      │      │      │      │      │    │   \  │   1  │   2  │   3  │   =  │
 //    ╰──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────╯
-//                  │      │      │      │    |   -  │   0  │   ~  │
+//                  │      │      │      │    |   -  │   0  │   .  │
 //                  ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
 
     ___            ___            ___            ___            ___                &kp LBKT       &kp N7         &kp N8         &kp N9         &kp RBKT
-    &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      ___                &kp SEMI       &kp N4         &kp N5         &kp N6         &kp COLON
+    &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      ___                &kp PLUS       &kp N4         &kp N5         &kp N6         &kp COLON
     ___            ___            ___            ___            ___                &kp BSLH       &kp N1         &kp N2         &kp N3         &kp EQUAL
                                 ___            ___            ___                &kp MINUS      &kp N0         &kp DOT
             >;
