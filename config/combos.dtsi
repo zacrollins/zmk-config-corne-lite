@@ -20,6 +20,8 @@
     8  -  9 : BACKSPACE
     16 - 17 : LEFT PAR
     17 - 18 : RIGHT PAR
+    26 - 27 : LEFT SQUARE BRACKET
+    27 - 28 : RIGHT SQUARE BRACKET
 
     VERTICAL
     1  - 11 : !
@@ -30,6 +32,9 @@
     6  - 16 : ^
     7  - 17 : &
     8  - 18 : *
+
+    15 - 25 : _
+    16 - 26 : -
 */
 
 
@@ -71,10 +76,12 @@ combos {
     /* Horizontal combos - right hand */
 
     COMBO(ent,   COMBO_TERM_FAST, 7 8,   &kp RETURN, DEF)
-    COMBO(bspc,  COMBO_TERM_FAST, 8 9,  &kp BSPC,   DEF)
+    COMBO(bspc,  COMBO_TERM_FAST, 8 9,   &kp BSPC,   DEF)
 
     COMBO(lpar,  COMBO_TERM_FAST, 16 17, HRC_LPAR,   DEF NAV NUM)
     COMBO(rpar,  COMBO_TERM_FAST, 17 18, HRC_RPAR,   DEF NAV NUM)
+    COMBO(lbkt,  COMBO_TERM_FAST, 26 27, &kp LBKT,   DEF NAV NUM)
+    COMBO(rbkt,  COMBO_TERM_FAST, 27 28, &kp RBKT,   DEF NAV NUM)
 
     /* vertical combos left hand */
 
@@ -89,5 +96,7 @@ combos {
     COMBO(caret, COMBO_TERM_SLOW, 6 16,  &kp CARET,  DEF)
     COMBO(amps,  COMBO_TERM_SLOW, 7 17,  &kp AMPS,   DEF)
     COMBO(star,  COMBO_TERM_SLOW, 8 18,  &kp STAR,   DEF)
+    COMBO(under, COMBO_TERM_SLOW, 15 25, &kp UNDER,  DEF)
+    COMBO(minus, COMBO_TERM_SLOW, 16 26, &kp MINUS,  DEF)
 
 };
