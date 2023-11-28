@@ -12,7 +12,7 @@
     HORIZONTAL
     1  -  2 : ESC
     2  -  3 : ENTER
-    12 - 13 : TAB
+    11 - 12 : TAB
     21 - 23 : CUT
     21 - 22 : COPY
     22 - 23 : PASTE
@@ -62,7 +62,7 @@ combos {
     COMBO(esc,   COMBO_TERM_FAST, 1 2,   &kp ESC,    DEF)
     COMBO(ret,   COMBO_TERM_FAST, 2 3,   &kp RETURN, DEF)
 
-    COMBO(tab,   COMBO_TERM_FAST, 12 13, HRC_TAB,    DEF NAV NUM)
+    COMBO(tab,   COMBO_TERM_FAST, 11 12, HRC_TAB,    DEF NAV NUM)
 
     COMBO(cut,   COMBO_TERM_FAST, 21 23, &kp LG(X),  DEF)
     COMBO(copy,  COMBO_TERM_FAST, 21 22, &kp LG(C),  DEF)
