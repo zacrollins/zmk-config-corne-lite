@@ -23,6 +23,8 @@
     26 - 27 : LEFT SQUARE BRACKET
     27 - 28 : RIGHT SQUARE BRACKET
 
+    20 - 21 : Function layer Momentary Layer
+
     VERTICAL
     1  - 11 : !
     2  - 12 : @
@@ -72,6 +74,8 @@ combos {
     COMBO(cut,   COMBO_TERM_FAST, 21 23, &kp LG(X),  DEF)
     COMBO(copy,  COMBO_TERM_FAST, 21 22, &kp LG(C),  DEF)
     COMBO(paste, COMBO_TERM_FAST, 22 23, &kp LG(V),  DEF)
+
+    COMBO(funcL, COMBO_TERM_SLOW, 20 21, &mo FUNC,   DEF)
 
     /* Horizontal combos - right hand */
 

@@ -68,15 +68,6 @@
     /* include combos file */
     #include "combos.dtsi"
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        // Define FUN layer as tri-state
-        tri_layer {
-            if-layers = <NUM SYM>;
-            then-layer = <FUNC>;
-        };
-    };
-
     behaviors {
         hml: homerow_mods_l {
             compatible = "zmk,behavior-hold-tap";
@@ -160,7 +151,7 @@
 //    ├─────────────┼─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┼────────────────┤
 //    │      Z      │      X      │      C        │      V        │        B       │    │       N         │        M       │      ,       │       .        │        /       │
 //    ╰─────────────┴─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┴────────────────╯
-//                                │ &mt HYPER ESC │ &lt NAV RET   │  &lt NUM TAB   │    |  &lt_bspc SYM   │     SPACE      │   CAPS_WORD  │
+//       [--func layer combo--]   │ &mt HYPER ESC │ &lt NAV RET   │  &lt NUM TAB   │    |  &lt_bspc SYM   │     SPACE      │   CAPS_WORD  │
 //                                ╰───────────────┴───────────────┴────────────────╯    ╰─────────────────┴────────────────┴──────────────╯
     &kp Q        &kp W         &hml MEH E    &kp R           &kp T       &kp Y   &kp U           &hmr MEH I      &kp O           &kp P
     &hml LALT A  &hml LCTRL S  &hml LGUI D   &hml LSHFT F    &kp G       &kp H   &hmr RSHFT J    &hmr RGUI K     &hmr RCTRL L    &hmr RALT SQT
@@ -233,19 +224,19 @@
             label = "FUNC";
             bindings = <
 //    ╭──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────╮
-//    │  F1  │  F2  │  F3  │  F4  │  F5  │    │  F6  │  F7  │  F8  │  F9  │  F10 │
+//    │ reset│ bootl│      │      │      │    │      │  F7  │  F8  │  F9  │  F10 │
 //    ├──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┤
-//    │ BT 0 │ BT 1 │ BT 2 │ BT 3 │BT CLR│    │ MUTE │ VOL -│ VOL +│      │  F11 |
+//    │ BT 0 │ BT 1 │ BT 2 │ BT 3 │BT CLR│    │      │  F4  │  F5  │  F6  │  F11 |
 //    ├──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┤
-//    │      │      │      │      │      │    │      │      │      │      │  F12 │
+//    │      │      │      │      │      │    │      │  F1  │  F2  │  F3  │  F12 │
 //    ╰──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────╯
-//           │sys_reset│bootloader│      │    |      ||bootloader│sys_reset│
+//                  |      │      |      |    |      |      |      │
 //                  ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
 
-    &kp F1         &kp F2         &kp F3         &kp F4         &kp F5             &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
-    ___            ___            ___            ___            ___                &kp C_MUTE     &kp C_VOL_DN   &kp C_VOL_UP   ___            &kp F11
-    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_CLR         ___            ___            ___            ___            &kp F12
-                                &sys_reset     &bootloader    ___                ___            &bootloader    &sys_reset
+    &sys_reset     &bootloader    ___            ___            ___              ___        &kp F7       &kp F8       &kp F9       &kp F10
+    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_CLR       ___        &kp F4       &kp F5       &kp F6       &kp F11
+    ___            ___            ___            ___            ___              ___        &kp F1       &kp F2       &kp F3       &kp F12
+                                ___             ___           ___               ___        ___          ___
             >;
         };
 
