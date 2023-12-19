@@ -1,0 +1,17 @@
+
+#define QUICK_TAP_MS 175
+
+// Layer Tap Settings
+
+&lt {  // layer-tap config
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
+
+/ {
+    chosen {
+        // zmk,matrix_transform = &default_transform;
+        zmk,matrix_transform = &five_column_transform;
+    };
+};
