@@ -16,7 +16,9 @@
     21 - 23 : CUT
     21 - 22 : COPY
     22 - 23 : PASTE
-    7  -  8 : ENTER
+    5  -  6 : ENTER
+    6  -  7 : [
+    7  -  8 : ]
     8  -  9 : BACKSPACE
     16 - 17 : (
     17 - 18 : )
@@ -76,13 +78,15 @@
 
         /* Horizontal combos - right hand */
 
-        COMBO(ent,   COMBO_TERM_FAST, 7 8,   &kp RETURN, DEF)
+        COMBO(ret,   COMBO_TERM_FAST, 5 6,   &kp RETURN, DEF)
+        COMBO(lbkt,  COMBO_TERM_FAST, 6 7,   &kp LBKT,   DEF)
+        COMBO(rbkt,  COMBO_TERM_FAST, 7 8,   &kp RBKT,   DEF)
         COMBO(bspc,  COMBO_TERM_FAST, 8 9,   &kp BSPC,   DEF)
 
         COMBO(lpar,  COMBO_TERM_FAST, 16 17, HRC_LPAR,   DEF NAV NUM)
         COMBO(rpar,  COMBO_TERM_FAST, 17 18, HRC_RPAR,   DEF NAV NUM)
-        COMBO(lbkt,  COMBO_TERM_FAST, 26 27, &kp LBKT,   DEF NAV NUM)
-        COMBO(rbkt,  COMBO_TERM_FAST, 27 28, &kp RBKT,   DEF NAV NUM)
+        COMBO(lbrc,  COMBO_TERM_FAST, 26 27, &kp LBRC,   DEF NAV NUM)
+        COMBO(rbrc,  COMBO_TERM_FAST, 27 28, &kp RBRC,   DEF NAV NUM)
 
         /* vertical combos left hand */
 
