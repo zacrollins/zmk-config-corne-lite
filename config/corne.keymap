@@ -105,9 +105,9 @@
 //    ╰──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────╯
 //                  │      │      │      │    | BACK │ FWD  │      │
 //                  ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
-    &kp RG(Q)      &kp RG(W)      ___            ___            ___                &kp TABP       &kp TABN       &kp YSPCP      &kp YSPCN      &kp MCN
-    &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp DEL            &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp MCP
-    &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      &kp SCRN           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___
+    &kp RG(Q)      &kp RG(W)      ___            ___            ___                &kp TABP         &kp TABN       &kp YSPCP      &kp YSPCN        &kp MCN
+    &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp DEL            &mt_home 0 LEFT  &kp DOWN       &kp UP         &mt_end 0 RIGHT  &kp MCP
+    &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      &kp SCRN           &kp HOME         &kp PG_DN      &kp PG_UP      &kp END          ___
                                 ___            ___            ___                &kp BACK       &kp FWD        ___
             >;
         };
