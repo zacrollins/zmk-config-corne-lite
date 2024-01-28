@@ -20,6 +20,7 @@
     6  -  7 : [
     7  -  8 : ]
     8  -  9 : BACKSPACE
+    16 - 18 : DEL
     16 - 17 : (
     17 - 18 : )
     26 - 27 : {
@@ -82,6 +83,7 @@
         COMBO(lbkt,  COMBO_TERM_FAST, 6 7,   &kp LBKT,   DEF)
         COMBO(rbkt,  COMBO_TERM_FAST, 7 8,   &kp RBKT,   DEF)
         COMBO(bspc,  COMBO_TERM_FAST, 8 9,   &kp BSPC,   DEF)
+        COMBO(del,   COMBO_TERM_FAST, 16 18, &kp DEL,    DEF NAV NUM)
 
         COMBO(lpar,  COMBO_TERM_FAST, 16 17, HRC_LPAR,   DEF NAV NUM)
         COMBO(rpar,  COMBO_TERM_FAST, 17 18, HRC_RPAR,   DEF NAV NUM)
