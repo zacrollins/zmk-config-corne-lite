@@ -79,7 +79,7 @@
 
         /* Horizontal combos - right hand */
 
-        COMBO(ret,   COMBO_TERM_FAST, 5 6,   &kp RETURN, DEF)
+        COMBO(ent,   COMBO_TERM_FAST, 5 6,   &kp RETURN, DEF)
         COMBO(lbkt,  COMBO_TERM_FAST, 6 7,   &kp LBKT,   DEF)
         COMBO(rbkt,  COMBO_TERM_FAST, 7 8,   &kp RBKT,   DEF)
         COMBO(bspc,  COMBO_TERM_FAST, 8 9,   &kp BSPC,   DEF)
