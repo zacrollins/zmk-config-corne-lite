@@ -14,7 +14,7 @@
 
 // Shortcuts
 #define SCRN     LG(LS(N4))         //Screen Shot (save)
-#define SCRNC    LC(LG(LS(N4)))     //Screen Shot (save)
+#define SCRNC    LC(LG(LS(N4)))     //Screen Shot (save to clipboard)
 #define MUTE     LG(LS(M))          //Mute
 
 // HYPER and MEH
