@@ -77,18 +77,18 @@
             label = "SYM";
             bindings = <
 //    ╭──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────╮
-//    │   {  │   &  │   *  │   -  │   }  │    │      │   `  | HYPER│      │      |
+//    │   {  │   &  │   *  │   -  │   }  │    │      │      | HYPER│      │      |
 //    ├──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┤
 //    │   ;  │   $  │   %  │   ^  │   =  │    │      │ RSHFT│ RGUI │ RCTRL│ RALT │
 //    ├──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┤
-//    │   ~  │   !  │   @  │   #  │   |  │    │      │      │  MEH │      │      │
+//    │  `~  │   !  │   @  │   #  │   |  │    │      │      │  MEH │      │      │
 //    ╰──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────╯
 //                  │   (  │   )  │   _  │    |      │      │      │
 //                  ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
 
-    &kp LBRC       &kp AMPS       &kp STAR       &kp MINUS      &kp RBRC           ___            &kp GRAVE      &kp HYPER      ___            ___
+    &kp LBRC       &kp AMPS       &kp STAR       &kp MINUS      &kp RBRC           ___            ___            &kp HYPER      ___            ___
     &kp SEMI       &kp DOLLAR     &kp PRCNT      &kp CARET      &kp EQUAL          ___            &kp RSHFT      &kp RGUI       &kp RCTRL      &kp RALT
-    &kp TILDE      &kp EXCL       &kp AT         &kp HASH       &kp PIPE           ___            ___            &kp MEH        ___            ___
+    &kp GRAVE      &kp EXCL       &kp AT         &kp HASH       &kp PIPE           ___            ___            &kp MEH        ___            ___
                                 &kp LPAR       &kp RPAR       &kp UNDER          ___            ___            ___
             >;
         };
