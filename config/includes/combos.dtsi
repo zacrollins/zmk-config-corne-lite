@@ -42,23 +42,27 @@
 
 
 // use require-prior-idle-ms for combos
-#undef COMBO_HOOK
-#define COMBO_HOOK require-prior-idle-ms = <150>;
+// #undef COMBO_HOOK
+// #define COMBO_HOOK require-prior-idle-ms = <150>;
 
 #define COMBO_TERM_FAST     18
 #define COMBO_TERM_SLOW     30
+
+#define COMBO_IDLE_FAST     150
+#define COMBO_IDLE_SLOW     50
 
 /* Home Row Mod combo tap only */
 #define HRC_TAB    &hml     LC(LGUI) TAB
 #define HRC_LPAR   &hmr     RS(RGUI) LPAR
 #define HRC_RPAR   &hmr     RC(RGUI) RPAR
 
-#define COMBO(NAME, TIMEOUT, KEYS, BINDINGS, LAYERS) \
+#define COMBO(NAME, TIMEOUT, IDLE, KEYS, BINDINGS, LAYERS) \
     combo_##NAME { \
         timeout-ms = <TIMEOUT>; \
         key-positions = <KEYS>; \
         bindings = <BINDINGS>; \
         layers = <LAYERS>; \
+        require-prior-idle-ms = <IDLE>; \
     };
 / {
 
@@ -68,43 +72,43 @@
 
         /* Horizontal combos - left hand */
 
-        COMBO(esc,   COMBO_TERM_FAST, 1 2,   &kp ESC,    DEF)
-        COMBO(ret,   COMBO_TERM_FAST, 2 3,   &kp RETURN, DEF)
+        COMBO(esc,   COMBO_TERM_FAST, COMBO_IDLE_FAST, 1 2,   &kp ESC,    DEF)
+        COMBO(ret,   COMBO_TERM_FAST, COMBO_IDLE_FAST, 2 3,   &kp RETURN, DEF)
 
-        COMBO(tab,   COMBO_TERM_FAST, 11 12, HRC_TAB,    DEF NAV NUM)
+        COMBO(tab,   COMBO_TERM_FAST, COMBO_IDLE_FAST, 11 12, HRC_TAB,    DEF NAV NUM)
 
-        COMBO(cut,   COMBO_TERM_FAST, 21 23, &kp LG(X),  DEF)
-        COMBO(copy,  COMBO_TERM_FAST, 21 22, &kp LG(C),  DEF)
-        COMBO(paste, COMBO_TERM_FAST, 22 23, &kp LG(V),  DEF)
+        COMBO(cut,   COMBO_TERM_FAST, COMBO_IDLE_FAST, 21 23, &kp LG(X),  DEF)
+        COMBO(copy,  COMBO_TERM_FAST, COMBO_IDLE_FAST, 21 22, &kp LG(C),  DEF)
+        COMBO(paste, COMBO_TERM_FAST, COMBO_IDLE_FAST, 22 23, &kp LG(V),  DEF)
 
         /* Horizontal combos - right hand */
 
-        COMBO(ent,   COMBO_TERM_FAST, 5 6,   &kp RETURN, DEF)
-        COMBO(lbkt,  COMBO_TERM_FAST, 6 7,   &kp LBKT,   DEF)
-        COMBO(rbkt,  COMBO_TERM_FAST, 7 8,   &kp RBKT,   DEF)
-        COMBO(bspc,  COMBO_TERM_FAST, 8 9,   &kp BSPC,   DEF)
-        COMBO(del,   COMBO_TERM_FAST, 16 18, &kp DEL,    DEF NAV NUM)
+        COMBO(ent,   COMBO_TERM_FAST, COMBO_IDLE_FAST, 5 6,   &kp RETURN, DEF)
+        COMBO(lbkt,  COMBO_TERM_FAST, COMBO_IDLE_FAST, 6 7,   &kp LBKT,   DEF)
+        COMBO(rbkt,  COMBO_TERM_FAST, COMBO_IDLE_FAST, 7 8,   &kp RBKT,   DEF)
+        COMBO(bspc,  COMBO_TERM_FAST, COMBO_IDLE_FAST, 8 9,   &kp BSPC,   DEF)
+        COMBO(del,   COMBO_TERM_FAST, COMBO_IDLE_FAST, 16 18, &kp DEL,    DEF NAV NUM)
 
-        COMBO(lpar,  COMBO_TERM_FAST, 16 17, HRC_LPAR,   DEF NAV NUM)
-        COMBO(rpar,  COMBO_TERM_FAST, 17 18, HRC_RPAR,   DEF NAV NUM)
-        COMBO(lbrc,  COMBO_TERM_FAST, 26 27, &kp LBRC,   DEF NAV NUM)
-        COMBO(rbrc,  COMBO_TERM_FAST, 27 28, &kp RBRC,   DEF NAV NUM)
+        COMBO(lpar,  COMBO_TERM_FAST, COMBO_IDLE_FAST, 16 17, HRC_LPAR,   DEF NAV NUM)
+        COMBO(rpar,  COMBO_TERM_FAST, COMBO_IDLE_FAST, 17 18, HRC_RPAR,   DEF NAV NUM)
+        COMBO(lbrc,  COMBO_TERM_FAST, COMBO_IDLE_FAST, 26 27, &kp LBRC,   DEF NAV NUM)
+        COMBO(rbrc,  COMBO_TERM_FAST, COMBO_IDLE_FAST, 27 28, &kp RBRC,   DEF NAV NUM)
 
         /* vertical combos left hand */
 
-        COMBO(bang,  COMBO_TERM_SLOW, 1 11,  &kp EXCL,   DEF)
-        COMBO(at,    COMBO_TERM_SLOW, 2 12,  &kp AT,     DEF)
-        COMBO(hash,  COMBO_TERM_SLOW, 3 13,  &kp HASH,   DEF)
-        COMBO(dllr,  COMBO_TERM_SLOW, 4 14,  &kp DLLR,   DEF)
-        COMBO(prcnt, COMBO_TERM_SLOW, 5 15,  &kp PRCNT,  DEF)
+        COMBO(bang,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW, 1 11,  &kp EXCL,   DEF)
+        COMBO(at,    COMBO_TERM_SLOW, COMBO_IDLE_SLOW, 2 12,  &kp AT,     DEF)
+        COMBO(hash,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW, 3 13,  &kp HASH,   DEF)
+        COMBO(dllr,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW, 4 14,  &kp DLLR,   DEF)
+        COMBO(prcnt, COMBO_TERM_SLOW, COMBO_IDLE_SLOW, 5 15,  &kp PRCNT,  DEF)
 
         /* vertical combos right hand */
 
-        COMBO(caret, COMBO_TERM_SLOW, 6 16,  &kp CARET,  DEF)
-        COMBO(amps,  COMBO_TERM_SLOW, 7 17,  &kp AMPS,   DEF)
-        COMBO(star,  COMBO_TERM_SLOW, 8 18,  &kp STAR,   DEF)
-        COMBO(under, COMBO_TERM_SLOW, 15 25, &kp UNDER,  DEF)
-        COMBO(minus, COMBO_TERM_SLOW, 16 26, &kp MINUS,  DEF)
+        COMBO(caret, COMBO_TERM_SLOW, COMBO_IDLE_SLOW, 6 16,  &kp CARET,  DEF)
+        COMBO(amps,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW, 7 17,  &kp AMPS,   DEF)
+        COMBO(star,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW, 8 18,  &kp STAR,   DEF)
+        COMBO(under, COMBO_TERM_SLOW, COMBO_IDLE_SLOW, 15 25, &kp UNDER,  DEF)
+        COMBO(minus, COMBO_TERM_SLOW, COMBO_IDLE_SLOW, 16 26, &kp MINUS,  DEF)
 
     };
 };
