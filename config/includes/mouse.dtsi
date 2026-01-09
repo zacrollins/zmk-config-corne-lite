@@ -1,26 +1,44 @@
-#include <dt-bindings/zmk/mouse.h>
+// Settings tuned for 3840 x 2160 display resolution
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 600 // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20  // 10
+
+#include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
 
 &mmv {
-    acceleration-exponent = <1>;      // 1
-    time-to-max-speed-ms = <500>;     // 300
-    delay-ms = <0>;                   // 0
+  acceleration-exponent = <1>;          // 1
+  time-to-max-speed-ms = <500>;         // 300
+  trigger-period-ms = <16>;             // 16
 };
 
-&mwh {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <40>;      // 300
-    delay-ms = <0>;                   // 0
+&msc {
+  acceleration-exponent = <0>;          // 0
+  time-to-max-speed-ms = <300>;         // 300
+  trigger-period-ms = <16>;             // 16
 };
 
-#define U_MOUSE_MOVE_MAX 1500       // 600
-#define U_MOUSE_SCROLL_MAX 20       // 10
+&mmv_input_listener {
+  precision {
+    layers = <FN>;
+    input-processors = <&zip_xy_scaler 1 4>;
+  };
+};
 
-#define M_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
-#define M_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
-#define M_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
-#define M_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
+&msc_input_listener {
+  precision {
+    layers = <FN>;
+    input-processors = <&zip_scroll_scaler 4 1>;
+  };
+};
 
-#define S_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
-#define S_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
-#define S_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
-#define S_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+#define M_UP &mmv MOVE_UP
+#define M_DN &mmv MOVE_DOWN
+#define M_LFT &mmv MOVE_LEFT
+#define M_RGT &mmv MOVE_RIGHT
+#define MW_UP &msc SCRL_UP
+#define MW_DN &msc SCRL_DOWN
+#define MW_LFT &msc SCRL_LEFT
+#define MW_RGT &msc SCRL_RIGHT
+#define RCLK &mkp RCLK
+#define LCLK &mkp LCLK
+#define MCLK &mkp MCLK
