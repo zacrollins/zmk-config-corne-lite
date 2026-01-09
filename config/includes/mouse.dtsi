@@ -16,17 +16,3 @@
   time-to-max-speed-ms = <300>;         // 300
   trigger-period-ms = <16>;             // 16
 };
-
-&mmv_input_listener {
-  precision {
-    layers = <FN>;
-    input-processors = <&zip_xy_scaler 1 4>;
-  };
-};
-
-&msc_input_listener {
-  precision {
-    layers = <FN>;
-    input-processors = <&zip_scroll_scaler 4 1>;
-  };
-};
