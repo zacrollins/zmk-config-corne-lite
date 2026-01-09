@@ -27,6 +27,7 @@
 #include "includes/settings.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/behaviours.dtsi"
+#include "includes/mouse.dtsi"
 
 / {
 
@@ -145,7 +146,7 @@
 //                  |      │      |      |    | LCLK │ RCLK │      |
 //                  ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
 
-     ___          ___            ___           ___          ___                ___              &mwh SCRL_DOWN    &mwh SCRL_UP    ___              ___
+     ___          ___            ___           ___          ___                ___              &msc SCRL_DOWN    &msc SCRL_UP    ___              ___
      &kp LALT     &kp LCTRL      &kp LGUI      &kp LSHFT    ___                &mmv MOVE_LEFT   &mmv MOVE_DOWN    &mmv MOVE_UP    &mmv MOVE_RIGHT  ___
      ___          ___            ___           ___          ___                ___              ___               ___             ___              ___
                                ___           ___           ___                &mkp LCLK      &mkp RCLK      ___
