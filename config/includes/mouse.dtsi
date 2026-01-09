@@ -30,15 +30,3 @@
     input-processors = <&zip_scroll_scaler 4 1>;
   };
 };
-
-#define M_UP &mmv MOVE_UP
-#define M_DN &mmv MOVE_DOWN
-#define M_LFT &mmv MOVE_LEFT
-#define M_RGT &mmv MOVE_RIGHT
-#define MW_UP &msc SCRL_UP
-#define MW_DN &msc SCRL_DOWN
-#define MW_LFT &msc SCRL_LEFT
-#define MW_RGT &msc SCRL_RIGHT
-#define RCLK &mkp RCLK
-#define LCLK &mkp LCLK
-#define MCLK &mkp MCLK
