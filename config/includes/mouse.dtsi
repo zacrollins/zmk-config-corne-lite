@@ -1,18 +1,19 @@
 // Settings tuned for 3840 x 2160 display resolution
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 2000 // 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20  // 10
 
 #include <dt-bindings/zmk/pointing.h>
-#include <input/processors.dtsi>
+#include <behaviors/mouse_keys.dtsi>
+/* #include <input/processors.dtsi> */
 
-&mmv {
-  acceleration-exponent = <1>;          // 1
-  time-to-max-speed-ms = <500>;         // 300
-  trigger-period-ms = <16>;             // 16
-};
-
-&msc {
-  acceleration-exponent = <0>;          // 0
-  time-to-max-speed-ms = <300>;         // 300
-  trigger-period-ms = <16>;             // 16
-};
+/* &mmv { */
+/*   acceleration-exponent = <1>;          // 1 */
+/*   time-to-max-speed-ms = <500>;         // 300 */
+/*   trigger-period-ms = <16>;             // 16 */
+/* }; */
+/**/
+/* &msc { */
+/*   acceleration-exponent = <0>;          // 0 */
+/*   time-to-max-speed-ms = <300>;         // 300 */
+/*   trigger-period-ms = <16>;             // 16 */
+/* }; */
